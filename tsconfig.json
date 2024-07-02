@@ -1,0 +1,29 @@
+{
+  // 指定编译后的JavaScript文件的模块系统
+  "compilerOptions": {
+    "module": "commonjs" // 或根据需要改为 "es2015" 或 "esnext"
+  },
+  // 指定编译器目标ES版本
+  "target": "es6",
+  // 启用严格的类型检查选项，提高代码质量
+  "strict": true,
+  // 允许从没有设置默认导出的模块中默认导入
+  "esModuleInterop": true,
+  // 输出目录，编译后的.js文件存放位置
+  "outDir": "./dist",
+  // 包含要编译的文件或目录列表
+  "include": [
+    "src/**/*"
+  ],
+  // 排除不希望被编译的文件或目录
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts" // 例如，排除测试文件
+  ],
+  // 解析非相对模块名的基地址
+  "baseUrl": "./src",
+  // 解析模块的路径映射
+  "paths": {
+    "*": ["node_modules/*", "src/types/*"]
+  }
+}
